@@ -1,0 +1,12 @@
+a=int(input("Enter the number: "))
+# b=int(input("Enter the number :"))
+# print("The Sum of numbers is :",(a+b))
+# print("The Difference of numbers is :",(a-b))
+# print("The Product of numbers is :",(a*b))
+# print("The Division of numbers is :",(a/b))
+# print("The Modulus of numbers is :",(a%b))
+# print("The Exponational of numbers is :",(a**b))
+# print("The Floor Division of numbers is :",(a//b))
+cube=lambda x: x*x*x
+# x=int(a)
+print("The cube of number is:",cube(a))

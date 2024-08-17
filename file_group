@@ -1,0 +1,45 @@
+import os 
+
+folder_path='NewEnvironment/Images'
+
+os.makedirs(folder_path,exist_ok=True)
+
+dummy_files=[
+    'sjk.png',
+    'gdk.png',
+    'kgd.png',
+    'dki.png',
+    'lkhd.jpg',
+    'lksd.jpg',
+    'lkdl.jpg'
+]
+for file_name in dummy_files:
+    file_path=os.path.join(folder_path, file_name)#Constructs the path for the file in dummy_files
+    with open(file_path,'w') as f:
+        f.write('')
+
+png_count=1
+jpg_count=1
+for file_name in os.listdir(folder_path):
+    old_file_path=os.path.join(folder_path, file_name)
+    if file_name.endswith('.png'):
+        new_file_name=f"{png_count}"+ file_name
+        png_count+=1
+    elif file_name.endswith('.jpg'):
+        new_file_name=f"{jpg_count}"+ file_name
+        jpg_count+=1
+    else:        
+        continue
+
+    new_file_path=os.path.join(folder_path, new_file_name)
+
+    os.rename(old_file_path,new_file_path)
+print("Names have been changed!!")
+        
+
+
+
+
+
+
+
